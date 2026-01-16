@@ -1,8 +1,0 @@
-{
-  "label": "Interface",
-  "position": 10,
-  "link": {
-    "type": "generated-index",
-    "description": "Chat, HUD, and notification packets (IDs 210-234)"
-  }
-}

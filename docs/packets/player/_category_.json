@@ -1,8 +1,0 @@
-{
-  "label": "Player",
-  "position": 5,
-  "link": {
-    "type": "generated-index",
-    "description": "Player state and action packets (IDs 100-119)"
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "label": "Window/UI",
-  "position": 9,
-  "link": {
-    "type": "generated-index",
-    "description": "UI window interaction packets (IDs 200-204)"
-  }
-}

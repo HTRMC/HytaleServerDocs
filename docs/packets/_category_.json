@@ -1,8 +1,0 @@
-{
-  "label": "Packets",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Complete documentation of all 170 Hytale server packets organized by category."
-  }
-}

@@ -1,8 +1,0 @@
-{
-  "label": "Authentication",
-  "position": 2,
-  "link": {
-    "type": "generated-index",
-    "description": "Login and authentication flow packets (IDs 10-18)"
-  }
-}
