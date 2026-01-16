@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Hytale Server Protocol',
   tagline: 'Documentation for Hytale Server Network Packets',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
 
   future: {
     v4: true,
@@ -48,10 +48,10 @@ const config: Config = {
       respectPrefersColorScheme: false,
     },
     navbar: {
-      title: 'Hytale Server Protocol',
+      title: 'Server Protocol',
       logo: {
         alt: 'Hytale Server Docs',
-        src: 'img/logo.svg',
+        src: 'img/hytale-logo.png',
       },
       items: [
         {
@@ -89,7 +89,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} HTRMC. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} HTRMC. Built with Docusaurus.<br/>This is an unofficial community project and is not affiliated with or endorsed by Hypixel Studios or Hytale.`,
     },
     prism: {
       theme: prismThemes.github,

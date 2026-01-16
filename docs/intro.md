@@ -5,6 +5,10 @@ slug: /
 
 # Hytale Server Protocol Documentation
 
+:::warning Disclaimer
+This is an **unofficial** community project. It is not affiliated with, endorsed by, or connected to Hypixel Studios or Hytale in any way. All trademarks and registered trademarks are the property of their respective owners.
+:::
+
 This documentation covers the network protocol used by Hytale servers to communicate with clients. The protocol consists of **170 packets** organized into 17 categories.
 
 ## Protocol Overview
