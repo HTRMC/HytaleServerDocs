@@ -1,0 +1,8 @@
+{
+  "label": "Inventory",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "description": "Inventory management packets (IDs 170-179)"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "label": "World Setup",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "World configuration and asset loading packets (IDs 20-34)"
+  }
+}

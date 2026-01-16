@@ -1,0 +1,8 @@
+{
+  "label": "Connection",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Connection handshake and keepalive packets (IDs 0-3)"
+  }
+}

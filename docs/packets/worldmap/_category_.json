@@ -1,0 +1,8 @@
+{
+  "label": "World Map",
+  "position": 11,
+  "link": {
+    "type": "generated-index",
+    "description": "Map display and teleportation packets (IDs 240-245)"
+  }
+}

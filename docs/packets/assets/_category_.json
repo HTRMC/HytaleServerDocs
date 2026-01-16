@@ -1,0 +1,8 @@
+{
+  "label": "Asset Updates",
+  "position": 4,
+  "link": {
+    "type": "generated-index",
+    "description": "Game asset definitions and updates (IDs 40-85)"
+  }
+}

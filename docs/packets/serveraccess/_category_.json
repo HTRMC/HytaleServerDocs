@@ -1,0 +1,8 @@
+{
+  "label": "Server Access",
+  "position": 12,
+  "link": {
+    "type": "generated-index",
+    "description": "Access control and permission packets (IDs 250-252)"
+  }
+}

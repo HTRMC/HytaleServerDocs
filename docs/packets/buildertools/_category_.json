@@ -1,0 +1,8 @@
+{
+  "label": "Builder Tools",
+  "position": 17,
+  "link": {
+    "type": "generated-index",
+    "description": "World editing tool packets (IDs 400-423)"
+  }
+}
