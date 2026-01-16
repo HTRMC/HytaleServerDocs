@@ -1,30 +1,392 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Hytale-inspired theme for Docusaurus
+ * Based on the Hytale Support site design
  */
 
-/* You can override the default Infima variables here. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap');
+
+/* Hytale color palette */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --hytale-bg-dark: #15243a;
+  --hytale-bg-lighter: #1c2d47;
+  --hytale-bg-card: #1e3352;
+  --hytale-text: #b7cedd;
+  --hytale-text-muted: #7a9bb5;
+  --hytale-accent: #f5a623;
+  --hytale-accent-hover: #ffc04d;
+  --hytale-link: #5eb3e4;
+  --hytale-border: #2a4162;
+
+  /* Infima overrides */
+  --ifm-color-primary: #5eb3e4;
+  --ifm-color-primary-dark: #42a5df;
+  --ifm-color-primary-darker: #3499d6;
+  --ifm-color-primary-darkest: #2a7db0;
+  --ifm-color-primary-light: #7ac1e9;
+  --ifm-color-primary-lighter: #8ecaed;
+  --ifm-color-primary-lightest: #b5dcf4;
+
+  --ifm-background-color: var(--hytale-bg-dark);
+  --ifm-background-surface-color: var(--hytale-bg-lighter);
+  --ifm-navbar-background-color: var(--hytale-bg-dark);
+  --ifm-footer-background-color: var(--hytale-bg-dark);
+
+  --ifm-font-family-base: 'Nunito Sans', sans-serif;
+  --ifm-heading-font-family: 'Nunito Sans', sans-serif;
+  --ifm-font-color-base: var(--hytale-text);
+  --ifm-heading-color: #ffffff;
+
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-border-color: var(--hytale-border);
+
+  --ifm-link-color: var(--hytale-link);
+  --ifm-link-hover-color: var(--hytale-accent-hover);
+
+  --ifm-menu-color: var(--hytale-text);
+  --ifm-menu-color-active: #ffffff;
+  --ifm-menu-color-background-active: var(--hytale-bg-card);
+
+  --ifm-toc-link-color: var(--hytale-text-muted);
+  --ifm-toc-border-color: var(--hytale-border);
+
+  --docusaurus-highlighted-code-line-bg: rgba(94, 179, 228, 0.15);
+
+  --ifm-card-background-color: var(--hytale-bg-card);
+  --ifm-hero-background-color: var(--hytale-bg-dark);
+  --ifm-hero-text-color: var(--hytale-text);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Force dark mode always */
+[data-theme='light'] {
+  --ifm-background-color: var(--hytale-bg-dark);
+  --ifm-background-surface-color: var(--hytale-bg-lighter);
+  --ifm-navbar-background-color: var(--hytale-bg-dark);
+  --ifm-footer-background-color: var(--hytale-bg-dark);
+  --ifm-font-color-base: var(--hytale-text);
+  --ifm-heading-color: #ffffff;
+  --ifm-menu-color: var(--hytale-text);
+  --ifm-toc-link-color: var(--hytale-text-muted);
+  --ifm-card-background-color: var(--hytale-bg-card);
+  --ifm-color-primary: #5eb3e4;
+  --ifm-color-primary-dark: #42a5df;
+  --ifm-color-primary-darker: #3499d6;
+  --ifm-color-primary-darkest: #2a7db0;
+  --ifm-color-primary-light: #7ac1e9;
+  --ifm-color-primary-lighter: #8ecaed;
+  --ifm-color-primary-lightest: #b5dcf4;
+}
+
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: var(--hytale-bg-dark);
+  --ifm-background-surface-color: var(--hytale-bg-lighter);
+  --ifm-navbar-background-color: var(--hytale-bg-dark);
+  --ifm-footer-background-color: var(--hytale-bg-dark);
+  --ifm-font-color-base: var(--hytale-text);
+  --ifm-heading-color: #ffffff;
+  --ifm-menu-color: var(--hytale-text);
+  --ifm-toc-link-color: var(--hytale-text-muted);
+  --ifm-card-background-color: var(--hytale-bg-card);
+  --ifm-color-primary: #5eb3e4;
+  --ifm-color-primary-dark: #42a5df;
+  --ifm-color-primary-darker: #3499d6;
+  --ifm-color-primary-darkest: #2a7db0;
+  --ifm-color-primary-light: #7ac1e9;
+  --ifm-color-primary-lighter: #8ecaed;
+  --ifm-color-primary-lightest: #b5dcf4;
+  --docusaurus-highlighted-code-line-bg: rgba(94, 179, 228, 0.2);
+}
+
+/* Global styles */
+html, body {
+  background-color: var(--hytale-bg-dark);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Navbar styling */
+.navbar {
+  background-color: var(--hytale-bg-dark);
+  border-bottom: 1px solid var(--hytale-border);
+  box-shadow: none;
+}
+
+.navbar__title {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.navbar__link {
+  color: var(--hytale-text);
+  font-weight: 600;
+  transition: color 0.12s ease-in-out;
+}
+
+.navbar__link:hover,
+.navbar__link--active {
+  color: #ffffff;
+}
+
+/* Sidebar styling */
+.menu {
+  background-color: transparent;
+}
+
+.menu__link {
+  border-radius: 8px;
+  transition: all 0.12s ease-in-out;
+}
+
+.menu__link:hover {
+  background-color: var(--hytale-bg-card);
+  color: #ffffff;
+}
+
+.menu__link--active {
+  background-color: var(--hytale-bg-card);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.menu__list-item-collapsible:hover {
+  background-color: var(--hytale-bg-card);
+}
+
+/* Category labels */
+.theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Main content area */
+.main-wrapper {
+  background-color: var(--hytale-bg-dark);
+}
+
+article {
+  background-color: var(--hytale-bg-dark);
+}
+
+/* Markdown content */
+.markdown h1 {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.markdown h2 {
+  color: #ffffff;
+  font-weight: 700;
+  border-bottom: 1px solid var(--hytale-border);
+  padding-bottom: 0.5rem;
+}
+
+.markdown h3, .markdown h4, .markdown h5, .markdown h6 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Tables */
+.markdown table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.markdown table th {
+  background-color: var(--hytale-bg-card);
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid var(--hytale-border);
+}
+
+.markdown table td {
+  border: 1px solid var(--hytale-border);
+  background-color: var(--hytale-bg-lighter);
+}
+
+.markdown table tr:nth-child(even) td {
+  background-color: var(--hytale-bg-dark);
+}
+
+/* Code blocks */
+.prism-code {
+  background-color: var(--hytale-bg-card) !important;
+  border: 1px solid var(--hytale-border);
+  border-radius: 8px;
+}
+
+code {
+  background-color: var(--hytale-bg-card);
+  border: 1px solid var(--hytale-border);
+  border-radius: 4px;
+  color: var(--hytale-accent);
+  padding: 2px 6px;
+}
+
+/* Buttons */
+.button {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.12s ease-in-out;
+}
+
+.button--primary {
+  background-color: var(--hytale-accent);
+  border-color: var(--hytale-accent);
+  color: #15243a;
+}
+
+.button--primary:hover {
+  background-color: var(--hytale-accent-hover);
+  border-color: var(--hytale-accent-hover);
+  color: #15243a;
+}
+
+.button--secondary {
+  background-color: var(--hytale-bg-card);
+  border-color: var(--hytale-border);
+  color: #ffffff;
+}
+
+.button--secondary:hover {
+  background-color: var(--hytale-bg-lighter);
+  border-color: var(--hytale-link);
+  color: #ffffff;
+}
+
+/* Hero section */
+.hero {
+  background-color: var(--hytale-bg-dark);
+  background-image: linear-gradient(180deg, var(--hytale-bg-card) 0%, var(--hytale-bg-dark) 100%);
+}
+
+.hero__title {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.hero__subtitle {
+  color: var(--hytale-text);
+}
+
+/* Footer */
+.footer {
+  background-color: var(--hytale-bg-dark);
+  border-top: 1px solid var(--hytale-border);
+}
+
+.footer__title {
+  color: #ffffff;
+}
+
+.footer__link-item {
+  color: var(--hytale-text-muted);
+  transition: color 0.12s ease-in-out;
+}
+
+.footer__link-item:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: var(--hytale-text-muted);
+}
+
+/* Breadcrumbs */
+.breadcrumbs__link {
+  color: var(--hytale-text-muted);
+}
+
+.breadcrumbs__link:hover {
+  color: #ffffff;
+}
+
+/* Pagination */
+.pagination-nav__link {
+  background-color: var(--hytale-bg-card);
+  border: 1px solid var(--hytale-border);
+  border-radius: 8px;
+  transition: all 0.12s ease-in-out;
+}
+
+.pagination-nav__link:hover {
+  border-color: var(--hytale-link);
+}
+
+.pagination-nav__label {
+  color: #ffffff;
+}
+
+.pagination-nav__sublabel {
+  color: var(--hytale-text-muted);
+}
+
+/* TOC */
+.table-of-contents__link {
+  color: var(--hytale-text-muted);
+}
+
+.table-of-contents__link:hover,
+.table-of-contents__link--active {
+  color: #ffffff;
+}
+
+/* Search */
+.DocSearch-Button {
+  background-color: var(--hytale-bg-card) !important;
+  border: 1px solid var(--hytale-border) !important;
+  border-radius: 8px !important;
+}
+
+/* Cards/Category pages */
+.card {
+  background-color: var(--hytale-bg-card);
+  border: 1px solid var(--hytale-border);
+  border-radius: 12px;
+  transition: all 0.12s ease-in-out;
+}
+
+.card:hover {
+  border-color: var(--hytale-link);
+  transform: translateY(-2px);
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--hytale-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--hytale-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--hytale-text-muted);
+}
+
+/* Alerts/Admonitions */
+.alert {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+.alert--info {
+  background-color: rgba(94, 179, 228, 0.1);
+  border-color: var(--hytale-link);
+}
+
+.alert--warning {
+  background-color: rgba(245, 166, 35, 0.1);
+  border-color: var(--hytale-accent);
+}
+
+/* DocCard improvements */
+article.theme-doc-version-banner,
+.theme-doc-version-badge {
+  background-color: var(--hytale-bg-card);
 }
